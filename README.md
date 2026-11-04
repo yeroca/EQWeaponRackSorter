@@ -3,7 +3,7 @@
 ### What does it do? ###
 
 
-```WeaponSortSolver.ps1``` is a Powershell script that solves the weapon rack sorting puzzle in the 2027 EQ (TBD) expansion mission and raid event (TBD)
+```WeaponSortSolver.ps1``` is a Powershell script that solves the weapon rack sorting puzzle in the EQ **Favors of Fortune** expansion (Nov 2026) _Tier 3 – Plane of Guile Raid 2 – Eriak Zek_ event and also the _Plane of Guile - Eriak Zek Mission_.
 
 ### How do I get set up? ###
 
