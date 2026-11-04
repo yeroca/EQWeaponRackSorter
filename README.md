@@ -18,7 +18,7 @@
         1. Click the box to create a checkmark on "Change execution policy to allow local PowerShell scripts to run without signing. Require signing for remote scripts.".
         1. Underneath that, click the "Apply" button.
    
-    * Enable running Powershell scripts on Windows 10 by doing the following: 
+    * Enable running Powershell scripts on Windows 11 by doing the following: 
         1. Click the Windows Start button
         1. Click the Settings icon that looks like a gear
         1. On the upper left where it says, "Find a setting", click into that box and type "powershell developer settings"
