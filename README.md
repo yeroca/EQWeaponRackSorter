@@ -7,7 +7,7 @@
 
 ### How do I get set up? ###
 
-1. Download ```WeaponSortSolver.ps1``` into a convenient directory.  If you download from a browser, the .ps1 files may get a ```.txt``` extension attached to them.  Remove that extension so that it's named ```WeaponSortSolver.ps1``` by renaming the files.
+1. Download ```WeaponSortSolver.ps1``` into a convenient directory.  If you download from a browser, the file may get a ```.txt``` extension attached to them.  Remove that extension so that it's named ```WeaponSortSolver.ps1``` by renaming the file.
 1. Allow Windows to run unsigned powershell scripts:
     * Enable running Powershell scripts on Windows 10 by doing the following:  
         1. Click the Windows Start button
