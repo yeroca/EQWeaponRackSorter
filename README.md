@@ -7,7 +7,7 @@
 
 ### How do I get set up? ###
 
-1. Download ```WeaponSortSolver.ps1``` into a convenient directory.  If you download from a browser, the file may get a ```.txt``` extension attached to them.  Remove that extension so that it's named ```WeaponSortSolver.ps1``` by renaming the file.
+1. Download ```WeaponSortSolver.ps1``` into a convenient directory.  If you download from a browser, the file may get a ```.txt``` extension attached to it.  Remove that extension so that it's named ```WeaponSortSolver.ps1``` by renaming the file.
 1. Allow Windows to run unsigned powershell scripts:
     * Instructions for **Windows 10**:  
         1. Click the Windows Start button
@@ -38,6 +38,7 @@
   making sure to leave a space between the ```-NoExit``` and the path to ```WeaponSortSolver.ps1```.  
   For example, the entire line might look like this:  
   ```C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoExit C:\Users\Malcom\Downloads\WeaponSortSolver.ps1```
+    1. Click OK.  A new shortcut will appear on the desktop.
 
 ### How do I run it? ###
 
