@@ -4,13 +4,18 @@
 # PowerShell 5.0
 #
 # Four racks, four weapons per rack.
-# The first character in each string is the BOTTOM weapon.
+# The first character in each string is the BOTTOM (or TOP if -topFirst is specified) weapon.
 # Legal move: move one bottom weapon to an empty rack
 # or onto a rack whose bottom weapon is of the same type.
 
 # ------------------------------------------------------------
 # State utilities
 # ------------------------------------------------------------
+
+param (
+    [switch]$topFirst = $false
+)
+
 
 function Get-StateKey {
     param([string[]]$State)
@@ -154,16 +159,26 @@ function Find-Solution {
     return ,$solution
 }
 
+function Reverse-String {
+    param([string]$inputString)
+    return -join (($inputString.length-1)..0 | Foreach-Object { $inputString[$_] })
+}
+
+if ($topFirst) {
+	$startFrom = "TOP"
+} else {
+	$startFrom = "BOTTOM"
+}
 # ------------------------------------------------------------
 # Input
 # ------------------------------------------------------------
-
+Write-Host $reversedString
 Write-Host ""
 Write-Host "Weapon Rack Puzzle Solver"
 Write-Host "-----------------------"
-Write-Host "Enter the contents of each weapon rack."
+Write-Host "Enter the contents of each weapon rack, one letter per weapon."
 Write-Host "Letters: s, p, a for sword, spear, and axe respectively"
-Write-Host "First letter is the BOTTOM weapon."
+Write-Host "The first letter is the $startFrom weapon."
 Write-Host "If the rack is empty, just hit enter."
 Write-Host ""
 
@@ -194,6 +209,10 @@ for ($i = 0; $i -lt 4; $i++) {
         if ($entry -notmatch '^[spa]*$') {
             Write-Host "ERROR: Only the letters s, p, and a are allowed." -ForegroundColor Red
             continue
+        }
+
+		if ($topFirst) {
+			$entry = Reverse-String($entry)
         }
 
         # Count the letters in this entry.
